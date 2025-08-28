@@ -16,7 +16,10 @@
                 <i class="fas fa-building"></i>
                 <h1>Hugonówka</h1>
             </div>
-            <nav class="nav">
+            <button class="mobile-nav-toggle" id="mobileNavToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav" id="mobileNav">
                 <ul>
                     <li><a href="index.html">Strona główna</a></li>
                     <li><a href="harmonogram.html">Harmonogram wydarzenia</a></li>
@@ -296,5 +299,55 @@
 
     <script src="script.js"></script>
     <script src="accessibility.js"></script>
+    <script>
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        if (mobileNavToggle && mobileNav) {
+            mobileNavToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('mobile-active');
+                mobileNavToggle.classList.toggle('active');
+                const icon = mobileNavToggle.querySelector('i');
+                if (mobileNav.classList.contains('mobile-active')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+        }
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.innerWidth <= 768) {
+                    const dropdown = this.closest('.dropdown');
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 && mobileNav && mobileNavToggle) {
+                if (!mobileNav.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+                    mobileNav.classList.remove('mobile-active');
+                    mobileNavToggle.classList.remove('active');
+                    const icon = mobileNavToggle.querySelector('i');
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            }
+        });
+        
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && mobileNav) {
+                mobileNav.classList.remove('mobile-active');
+                if (mobileNavToggle) {
+                    mobileNavToggle.classList.remove('active');
+                    const icon = mobileNavToggle.querySelector('i');
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
