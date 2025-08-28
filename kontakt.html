@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Hugonówka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <h1>Hugonówka</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="harmonogram.html">Harmonogram wydarzenia</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Współpraca <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="partnerzy.html">Nasi partnerzy</a></li>
+                            <li><a href="wystawcy.html">Wystawcy</a></li>
+                            <li><a href="sponsorzy.html">Sponsorzy</a></li>
+                            <li><a href="organizator.html">Organizator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faqs.html">FAQS</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+
+                    <li><a href="#" id="adminLogin" class="admin-btn">Panel Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pinned Info Bar -->
+    <div class="info-bar">
+        <div class="container">
+            <div class="info-items">
+                <div class="info-item">
+                    <span class="info-label">Organizator:</span>
+                    <span class="info-value">Przykład1</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Sponsor:</span>
+                    <span class="info-value">Przykład2</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Wystawca:</span>
+                    <span class="info-value">Przykład3</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Nasi Partnerzy:</span>
+                    <span class="info-value">Przykład4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Kontakt</h1>
+            <p>Skontaktuj się z nami w sprawie wydarzeń i współpracy</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 id="contactTitle">Kontakt</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adres</h4>
+                            <p id="contactAddress">ul. Główna 1, 00-000 Przykładowo</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p id="contactPhone">+48 123 456 789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p id="contactEmail">kontakt@gminaprzykladowa.pl</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Godziny otwarcia</h4>
+                            <p>Poniedziałek - Piątek: 8:00 - 16:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Wyślij wiadomość</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Temat *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Wybierz temat</option>
+                                <option value="wydarzenia">Informacje o wydarzeniach</option>
+                                <option value="wspolpraca">Współpraca</option>
+                                <option value="wolontariat">Wolontariat</option>
+                                <option value="sugestie">Sugestie i pomysły</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Wiadomość *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span>Chcę otrzymywać informacje o nowych wydarzeniach</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hugonówka. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Panel Administratora</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Nazwa użytkownika:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Hasło:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Zaloguj się</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel" style="display: none;">
+        <div class="admin-header">
+            <h2>Panel Administracyjny</h2>
+            <button id="logoutBtn" class="logout-btn">Wyloguj</button>
+        </div>
+        
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="content">Treść strony</button>
+            <button class="tab-btn" data-tab="events">Wydarzenia</button>
+        </div>
+
+        <!-- Content Management Tab -->
+        <div class="admin-tab-content active" id="contentTab">
+            <h3>Zarządzanie treścią strony</h3>
+            
+            <div class="form-section">
+                <h4>Sekcja Hero</h4>
+                <div class="form-group">
+                    <label for="editHeroTitle">Tytuł główny:</label>
+                    <input type="text" id="editHeroTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editHeroDescription">Opis:</label>
+                    <textarea id="editHeroDescription" class="editable-field"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Sekcja O nas</h4>
+                <div class="form-group">
+                    <label for="editAboutTitle">Tytuł:</label>
+                    <input type="text" id="editAboutTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editAboutDescription">Opis:</label>
+                    <textarea id="editAboutDescription" class="editable-field"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Dane kontaktowe</h4>
+                <div class="form-group">
+                    <label for="editContactAddress">Adres:</label>
+                    <input type="text" id="editContactAddress" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editContactPhone">Telefon:</label>
+                    <input type="text" id="editContactPhone" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editContactEmail">Email:</label>
+                    <input type="email" id="editContactEmail" class="editable-field">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Tytuły sekcji</h4>
+                <div class="form-group">
+                    <label for="editProgramTitle">Tytuł sekcji Program:</label>
+                    <input type="text" id="editProgramTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editSpeakersTitle">Tytuł sekcji Prelegenci:</label>
+                    <input type="text" id="editSpeakersTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editPartnersTitle">Tytuł sekcji Partnerzy:</label>
+                    <input type="text" id="editPartnersTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editContactTitle">Tytuł sekcji Kontakt:</label>
+                    <input type="text" id="editContactTitle" class="editable-field">
+                </div>
+            </div>
+
+            <button id="saveContentBtn" class="save-btn">Zapisz zmiany</button>
+        </div>
+
+        <!-- Events Management Tab -->
+        <div class="admin-tab-content" id="eventsTab">
+            <h3>Zarządzanie wydarzeniami</h3>
+            
+            <div class="events-actions">
+                <button id="addEventBtn" class="add-btn">Dodaj nowe wydarzenie</button>
+            </div>
+
+            <div class="events-list" id="adminEventsList">
+                <!-- Lista wydarzeń do edycji -->
+            </div>
+
+            <!-- Add/Edit Event Form -->
+            <div class="event-form" id="eventForm" style="display: none;">
+                <h4 id="eventFormTitle">Dodaj nowe wydarzenie</h4>
+                <form id="eventEditForm">
+                    <input type="hidden" id="eventId">
+                    <div class="form-group">
+                        <label for="eventTitle">Tytuł wydarzenia:</label>
+                        <input type="text" id="eventTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Data:</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventTime">Godzina:</label>
+                        <input type="time" id="eventTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventLocation">Miejsce:</label>
+                        <input type="text" id="eventLocation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Opis:</label>
+                        <textarea id="eventDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventCategory">Kategoria:</label>
+                        <select id="eventCategory" required>
+                            <option value="kultura">Kultura</option>
+                            <option value="edukacja">Edukacja</option>
+                            <option value="sport">Sport</option>
+                            <option value="spoleczne">Społeczne</option>
+                            <option value="inne">Inne</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Zapisz wydarzenie</button>
+                        <button type="button" id="cancelEventBtn" class="cancel-btn">Anuluj</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="accessibility.js"></script>
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wydarzenia Gminne - Hugonówka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <h1>Hugonówka</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Strona główna</a></li>
+                    <li><a href="harmonogram.html">Harmonogram wydarzenia</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Współpraca <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="partnerzy.html">Nasi partnerzy</a></li>
+                            <li><a href="wystawcy.html">Wystawcy</a></li>
+                            <li><a href="sponsorzy.html">Sponsorzy</a></li>
+                            <li><a href="organizator.html">Organizator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faqs.html">FAQS</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+
+                    <li><a href="#" id="adminLogin" class="admin-btn">Panel Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pinned Info Bar -->
+    <div class="info-bar">
+        <div class="container">
+            <div class="info-items">
+                <div class="info-item">
+                    <span class="info-label">Organizator:</span>
+                    <span class="info-value">Przykład1</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Sponsor:</span>
+                    <span class="info-value">Przykład2</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Wystawca:</span>
+                    <span class="info-value">Przykład3</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Nasi Partnerzy:</span>
+                    <span class="info-value">Przykład4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h2 id="heroTitle">Życie kulturalne naszej gminy</h2>
+            <p id="heroDescription">Odkryj fascynujące wydarzenia, warsztaty i spotkania organizowane w naszej społeczności. Dołącz do nas i bądź częścią lokalnego życia kulturalnego!</p>
+            <a href="harmonogram.html" class="cta-button">Zobacz wydarzenia</a>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program" id="program">
+        <div class="container">
+            <h2 id="programTitle">Program i Agenda</h2>
+            <div class="program-content">
+                <div class="program-tabs">
+                    <button class="program-tab active" data-day="day1">Dzień 1 - 15.02.2024</button>
+                    <button class="program-tab" data-day="day2">Dzień 2 - 20.02.2024</button>
+                    <button class="program-tab" data-day="day3">Dzień 3 - 25.02.2024</button>
+                </div>
+                
+                <div class="program-schedule active" id="day1">
+                    <div class="schedule-item">
+                        <div class="time">09:00 - 10:00</div>
+                        <div class="content">
+                            <h4>Rejestracja uczestników</h4>
+                            <p>Przywitanie gości i rozdanie materiałów konferencyjnych</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">10:00 - 11:30</div>
+                        <div class="content">
+                            <h4>Otwarcie konferencji</h4>
+                            <p>Wystąpienie Wójta Gminy i przedstawienie celów spotkania</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">11:30 - 12:30</div>
+                        <div class="content">
+                            <h4>Klub Książki - "Lalka" Bolesława Prusa</h4>
+                            <p>Spotkanie miłośników literatury poświęcone analizie dzieła</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">12:30 - 14:00</div>
+                        <div class="content">
+                            <h4>Przerwa obiadowa</h4>
+                            <p>Networking i degustacja lokalnych potraw</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-schedule" id="day2">
+                    <div class="schedule-item">
+                        <div class="time">09:00 - 11:00</div>
+                        <div class="content">
+                            <h4>Warsztaty garncarskie dla dzieci</h4>
+                            <p>Zajęcia kreatywne dla dzieci w wieku 6-12 lat</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">11:00 - 12:30</div>
+                        <div class="content">
+                            <h4>Prezentacja projektów młodzieżowych</h4>
+                            <p>Pokaz inicjatyw młodych mieszkańców gminy</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">14:00 - 16:00</div>
+                        <div class="content">
+                            <h4>Debata o rozwoju gminy</h4>
+                            <p>Dyskusja z udziałem ekspertów i mieszkańców</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-schedule" id="day3">
+                    <div class="schedule-item">
+                        <div class="time">10:00 - 12:00</div>
+                        <div class="content">
+                            <h4>Spotkanie z mieszkańcami - planowane inwestycje</h4>
+                            <p>Prezentacja planowanych inwestycji na rok 2024</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">12:00 - 13:30</div>
+                        <div class="content">
+                            <h4>Lunch networkingowy</h4>
+                            <p>Możliwość nawiązania kontaktów biznesowych</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">14:00 - 16:00</div>
+                        <div class="content">
+                            <h4>Zamknięcie i podsumowanie</h4>
+                            <p>Podsumowanie efektów i planowanie kolejnych działań</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Nasze Wydarzenia w Obrazach</h2>
+            <div class="image-gallery">
+                <div class="image-item slide-in-image">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Koncert plenerowy">
+                    <div class="image-caption">Koncert plenerowy w Hugonówce</div>
+                </div>
+                <div class="image-item slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Warsztaty kulinarne">
+                    <div class="image-caption">Warsztaty kulinarne dla mieszkańców</div>
+                </div>
+                <div class="image-item fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Klub książki">
+                    <div class="image-caption">Spotkanie klubu książki</div>
+                </div>
+                <div class="image-item slide-in-image">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Festival lokalny">
+                    <div class="image-caption">Festiwal lokalnych artystów</div>
+                </div>
+                <div class="image-item slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Warsztaty dla dzieci">
+                    <div class="image-caption">Warsztaty kreatywne dla dzieci</div>
+                </div>
+                <div class="image-item fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Spotkanie społeczne">
+                    <div class="image-caption">Spotkanie integracyjne mieszkańców</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="speakers" id="speakers">
+        <div class="container">
+            <h2 id="speakersTitle">Prelegenci</h2>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>dr Anna Kowalska</h3>
+                        <p class="speaker-title">Literaturoznawca, Uniwersytet Warszawski</p>
+                        <p class="speaker-bio">Ekspert w dziedzinie literatury polskiej XIX wieku. Autorka wielu publikacji naukowych poświęconych twórczości Bolesława Prusa.</p>
+                        <div class="speaker-topics">
+                            <span class="topic">Literatura</span>
+                            <span class="topic">Edukacja</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>mgr Jan Nowak</h3>
+                        <p class="speaker-title">Artysta ceramik, Dom Kultury</p>
+                        <p class="speaker-bio">Z pasją prowadzi warsztaty garncarskie dla dzieci i młodzieży. Jego prace były prezentowane na wielu wystawach w kraju.</p>
+                        <div class="speaker-topics">
+                            <span class="topic">Sztuka</span>
+                            <span class="topic">Rzemiosło</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>prof. Maria Wiśniewska</h3>
+                        <p class="speaker-title">Ekolog, Politechnika Warszawska</p>
+                        <p class="speaker-bio">Specjalistka w dziedzinie ekologii miejskiej i zrównoważonego rozwoju. Prowadzi badania nad zielonymi rozwiązaniami dla gmin.</p>
+                        <div class="speaker-topics">
+                            <span class="topic">Ekologia</span>
+                            <span class="topic">Zrównoważony rozwój</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-photo">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="speaker-info">
+                        <h3>mgr Piotr Zieliński</h3>
+                        <p class="speaker-title">Wójt Gminy Przykładowa</p>
+                        <p class="speaker-bio">Od 10 lat zarządza gminą, wprowadzając innowacyjne rozwiązania i dbając o rozwój lokalnej społeczności.</p>
+                        <div class="speaker-topics">
+                            <span class="topic">Samorząd</span>
+                            <span class="topic">Rozwój lokalny</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <h2 id="partnersTitle">Partnerzy</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Uniwersytet Warszawski</h3>
+                    <p>Partner naukowy wspierający merytorycznie nasze wydarzenia edukacyjne</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Zakłady Przemysłowe "Przykład"</h3>
+                    <p>Główny sponsor wydarzeń kulturalnych i sportowych w gminie</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Biblioteka Narodowa</h3>
+                    <p>Partner w organizacji wydarzeń literackich i promocji czytelnictwa</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Fundacja "Zielona Polska"</h3>
+                    <p>Współorganizator warsztatów ekologicznych i akcji prośrodowiskowych</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Filharmonia Narodowa</h3>
+                    <p>Partner w organizacji koncertów i wydarzeń muzycznych</p>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Stowarzyszenie "Aktywna Gmina"</h3>
+                    <p>Organizacja pozarządowa wspierająca inicjatywy społeczne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Partners Section -->
+    <section class="partners" id="event-partners">
+        <div class="container">
+            <h2>Partnerzy Wydarzenia</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Organizator Główny</h3>
+                    <p>Gmina Przykładowa</p>
+                    <p>Główny organizator wszystkich wydarzeń kulturalnych i społecznych w naszej gminie.</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Dom Kultury</h3>
+                    <p>Partner kulturalny</p>
+                    <p>Współorganizator wydarzeń artystycznych i warsztatów kreatywnych.</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Szkoła Podstawowa</h3>
+                    <p>Partner edukacyjny</p>
+                    <p>Współpraca przy organizacji wydarzeń edukacyjnych i sportowych.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizer Section -->
+    <section class="organizer" id="organizer">
+        <div class="container">
+            <h2>Organizator</h2>
+            <div class="organizer-content">
+                <div class="organizer-info">
+                    <div class="organizer-logo">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Urząd Gminy Przykładowa</h3>
+                    <p>Jesteśmy głównym organizatorem wydarzeń w naszej gminie. Naszym celem jest tworzenie przestrzeni dla rozwoju kulturalnego, społecznego i edukacyjnego mieszkańców.</p>
+                    <div class="organizer-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ul. Główna 1, 00-000 Przykładowo</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+48 123 456 789</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>organizator@gminaprzykladowa.pl</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibitors Section -->
+    <section class="exhibitors" id="exhibitors">
+        <div class="container">
+            <h2>Wystawcy</h2>
+            <div class="exhibitors-grid">
+                <div class="exhibitor-card">
+                    <div class="exhibitor-logo">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Galeria Sztuki Lokalnej</h3>
+                    <p>Wystawa prac lokalnych artystów i rzemieślników</p>
+                    <div class="exhibitor-category">Sztuka</div>
+                </div>
+                <div class="exhibitor-card">
+                    <div class="exhibitor-logo">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Restauracja "Smaki Regionu"</h3>
+                    <p>Degustacja lokalnych potraw i produktów regionalnych</p>
+                    <div class="exhibitor-category">Gastronomia</div>
+                </div>
+                <div class="exhibitor-card">
+                    <div class="exhibitor-logo">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Gospodarstwo Ekologiczne</h3>
+                    <p>Prezentacja produktów ekologicznych i zrównoważonego rolnictwa</p>
+                    <div class="exhibitor-category">Ekologia</div>
+                </div>
+                <div class="exhibitor-card">
+                    <div class="exhibitor-logo">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Warsztat Rzemieślniczy</h3>
+                    <p>Pokazy tradycyjnych rzemiosł i możliwość zakupu wyrobów</p>
+                    <div class="exhibitor-category">Rzemiosło</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQS Section -->
+    <section class="faqs" id="faqs">
+        <div class="container">
+            <h2>Najczęściej Zadawane Pytania</h2>
+            <div class="faqs-content">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Czy udział w wydarzeniach jest bezpłatny?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>W większości przypadków tak. Wszystkie wydarzenia organizowane przez gminę są bezpłatne dla mieszkańców. O ewentualnych opłatach informujemy w opisie konkretnego wydarzenia.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Jak mogę się zapisać na wydarzenie?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Zapisy prowadzimy telefonicznie, mailowo lub osobiście w urzędzie gminy. Szczegółowe informacje znajdują się w opisie każdego wydarzenia.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Czy mogę zaproponować nowe wydarzenie?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oczywiście! Zachęcamy mieszkańców do zgłaszania pomysłów na nowe wydarzenia. Można to zrobić poprzez formularz kontaktowy lub bezpośrednio w urzędzie gminy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Gdzie mogę znaleźć więcej informacji o wydarzeniach?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Wszystkie aktualne informacje znajdują się na tej stronie. Dodatkowo informujemy o wydarzeniach poprzez lokalne media, plakaty i ogłoszenia w urzędzie gminy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 id="contactTitle">Kontakt</h2>
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Dane kontaktowe</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adres</h4>
+                                <p id="contactAddress">ul. Główna 1, 00-000 Przykładowo</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p id="contactPhone">+48 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p id="contactEmail">kontakt@gminaprzykladowa.pl</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Godziny pracy</h4>
+                                <p>Pon-Pt: 8:00-16:00<br>Sb: 9:00-13:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Formularz kontaktowy</h3>
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Imię i nazwisko *</label>
+                                    <input type="text" id="contactName" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Email *</label>
+                                    <input type="email" id="contactEmail" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Temat *</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Wybierz temat</option>
+                                    <option value="wydarzenia">Informacje o wydarzeniach</option>
+                                    <option value="wspolpraca">Współpraca</option>
+                                    <option value="reklamacje">Reklamacje</option>
+                                    <option value="inne">Inne</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Wiadomość *</label>
+                                <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="contactAgreement" required>
+                                    <span class="checkmark"></span>
+                                    Wyrażam zgodę na przetwarzanie moich danych osobowych *
+                                </label>
+                            </div>
+                            <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hugonówka. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Panel Administratora</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Nazwa użytkownika:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Hasło:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Zaloguj się</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel" style="display: none;">
+        <div class="admin-header">
+            <h2>Panel Administracyjny</h2>
+            <button id="logoutBtn" class="logout-btn">Wyloguj</button>
+        </div>
+        
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="content">Treść strony</button>
+            <button class="tab-btn" data-tab="events">Wydarzenia</button>
+        </div>
+
+        <!-- Content Management Tab -->
+        <div class="admin-tab-content active" id="contentTab">
+            <h3>Zarządzanie treścią strony</h3>
+            
+            <div class="form-section">
+                <h4>Dane kontaktowe</h4>
+                <div class="form-group">
+                    <label for="editContactAddress">Adres:</label>
+                    <input type="text" id="editContactAddress" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editContactPhone">Telefon:</label>
+                    <input type="text" id="editContactPhone" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editContactEmail">Email:</label>
+                    <input type="email" id="editContactEmail" class="editable-field">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Tytuły sekcji</h4>
+                <div class="form-group">
+                    <label for="editProgramTitle">Tytuł sekcji Program:</label>
+                    <input type="text" id="editProgramTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editSpeakersTitle">Tytuł sekcji Prelegenci:</label>
+                    <input type="text" id="editSpeakersTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editPartnersTitle">Tytuł sekcji Partnerzy:</label>
+                    <input type="text" id="editPartnersTitle" class="editable-field">
+                </div>
+                <div class="form-group">
+                    <label for="editContactTitle">Tytuł sekcji Kontakt:</label>
+                    <input type="text" id="editContactTitle" class="editable-field">
+                </div>
+            </div>
+
+            <button id="saveContentBtn" class="save-btn">Zapisz zmiany</button>
+        </div>
+
+        <!-- Events Management Tab -->
+        <div class="admin-tab-content" id="eventsTab">
+            <h3>Zarządzanie wydarzeniami</h3>
+            
+            <div class="events-actions">
+                <button id="addEventBtn" class="add-btn">Dodaj nowe wydarzenie</button>
+            </div>
+
+            <div class="events-list" id="adminEventsList">
+                <!-- Lista wydarzeń do edycji -->
+            </div>
+
+            <!-- Add/Edit Event Form -->
+            <div class="event-form" id="eventForm" style="display: none;">
+                <h4 id="eventFormTitle">Dodaj nowe wydarzenie</h4>
+                <form id="eventEditForm">
+                    <input type="hidden" id="eventId">
+                    <div class="form-group">
+                        <label for="eventTitle">Tytuł wydarzenia:</label>
+                        <input type="text" id="eventTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Data:</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventTime">Godzina:</label>
+                        <input type="time" id="eventTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventLocation">Miejsce:</label>
+                        <input type="text" id="eventLocation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDescription">Opis:</label>
+                        <textarea id="eventDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventCategory">Kategoria:</label>
+                        <select id="eventCategory" required>
+                            <option value="kultura">Kultura</option>
+                            <option value="edukacja">Edukacja</option>
+                            <option value="sport">Sport</option>
+                            <option value="spoleczne">Społeczne</option>
+                            <option value="inne">Inne</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Zapisz wydarzenie</button>
+                        <button type="button" id="cancelEventBtn" class="cancel-btn">Anuluj</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="accessibility.js"></script>
+</body>
+</html>
