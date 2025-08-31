@@ -73,19 +73,22 @@ class AccessibilityManager {
 
     bindEvents() {
         // Toggle panel
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('#accessibilityToggle')) {
-                this.togglePanel();
-            }
+    const toggleBtn = document.getElementById('accessibilityToggle');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.togglePanel();
         });
+    }
 
-        // Close panel when clicking outside
-        document.addEventListener('click', (e) => {
-            const panel = document.getElementById('accessibilityPanel');
-            if (panel && !panel.contains(e.target) && panel.classList.contains('active')) {
-                this.closePanel();
-            }
-        });
+    // Close panel when clicking outside
+    document.addEventListener('click', (e) => {
+        const panel = document.getElementById('accessibilityPanel');
+        if (panel && !panel.contains(e.target) && panel.classList.contains('active')) {
+            this.closePanel();
+        }
+    });
 
         // Accessibility controls
         document.addEventListener('click', (e) => {
@@ -139,15 +142,32 @@ class AccessibilityManager {
 
     togglePanel() {
         const panel = document.getElementById('accessibilityPanel');
+        const toggle = document.getElementById('accessibilityToggle');
+        
         if (panel) {
-            panel.classList.toggle('active');
+            const isActive = panel.classList.contains('active');
+            
+            if (isActive) {
+                // Zamykanie panelu
+                panel.classList.remove('active');
+                toggle.classList.remove('active');
+            } else {
+                // Otwieranie panelu
+                panel.classList.add('active');
+                toggle.classList.add('active');
+            }
+            
+            console.log('Panel toggled, active:', !isActive); // Debug
         }
     }
-
+    
     closePanel() {
         const panel = document.getElementById('accessibilityPanel');
+        const toggle = document.getElementById('accessibilityToggle');
+        
         if (panel) {
             panel.classList.remove('active');
+            toggle.classList.remove('active');
         }
     }
 
@@ -368,3 +388,22 @@ if (document.readyState === 'loading') {
 } else {
     new AccessibilityManager();
 }
+
+// Zamknij panel przy kliknięciu poza nim
+document.addEventListener('click', (e) => {
+    const panel = document.getElementById('accessibilityPanel');
+    const toggle = document.getElementById('accessibilityToggle');
+    
+    if (panel && panel.classList.contains('active')) {
+        if (!panel.contains(e.target)) {
+            this.closePanel();
+        }
+    }
+});
+
+// Zamknij panel przy naciśnięciu Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        this.closePanel();
+    }
+});
