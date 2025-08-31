@@ -41,29 +41,48 @@
         </div>
     </header>
 
-    <!-- Pinned Info Bar -->
-    <div class="info-bar">
-        <div class="container">
-            <div class="info-items">
+   <!-- Pinned Info Bar -->
+<div class="info-bar">
+    <div class="container">
+        <div class="info-scroll-wrapper">
+            <div class="info-items-scrolling">
                 <div class="info-item">
-                    <span class="info-label">Organizator:</span>
-                    <span class="info-value">Przykład1</span>
+                    <img src="images/stocer.jpg" alt="Stocer" class="info-logo">
+                    <span class="info-value">Stocer</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Sponsor:</span>
-                    <span class="info-value">Przykład2</span>
+                    <img src="images/polski-komitet-paralimpijski.jpg" alt="Polski Komitet Paralimpijski" class="info-logo">
+                    <span class="info-value">Polski Komitet Paralimpijski</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Wystawca:</span>
-                    <span class="info-value">Przykład3</span>
+                    <img src="images/gosir.jpg" alt="GOSIR Konstancin-Jeziorna" class="info-logo">
+                    <span class="info-value">GOSIR Konstancin-Jeziorna</span>
                 </div>
                 <div class="info-item">
-                    <span class="info-label">Nasi Partnerzy:</span>
-                    <span class="info-value">Przykład4</span>
+                    <img src="images/uzdrowisko-konstancin.jpg" alt="Uzdrowisko Konstancin" class="info-logo">
+                    <span class="info-value">Uzdrowisko Konstancin</span>
+                </div>
+                <!-- Duplikujemy logo dla płynnego przewijania -->
+                <div class="info-item">
+                    <img src="images/stocer.jpg" alt="Stocer" class="info-logo">
+                    <span class="info-value">Stocer</span>
+                </div>
+                <div class="info-item">
+                    <img src="images/polski-komitet-paralimpijski.jpg" alt="Polski Komitet Paralimpijski" class="info-logo">
+                    <span class="info-value">Polski Komitet Paralimpijski</span>
+                </div>
+                <div class="info-item">
+                    <img src="images/gosir.jpg" alt="GOSIR Konstancin-Jeziorna" class="info-logo">
+                    <span class="info-value">GOSIR Konstancin-Jeziorna</span>
+                </div>
+                <div class="info-item">
+                    <img src="images/uzdrowisko-konstancin.jpg" alt="Uzdrowisko Konstancin" class="info-logo">
+                    <span class="info-value">Uzdrowisko Konstancin</span>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -348,6 +367,99 @@
                 }
             }
         });
+        document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const infoBar = document.querySelector('.info-bar');
+    
+    // Funkcja do sprawdzania czy jakikolwiek dropdown jest aktywny
+    function checkDropdownState() {
+        const anyDropdownActive = document.querySelector('.dropdown.active');
+        if (anyDropdownActive) {
+            document.body.classList.add('dropdown-active');
+        } else {
+            document.body.classList.remove('dropdown-active');
+        }
+    }
+    
+    // Obsługa kliknięć na dropdown toggle
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Zamknij inne dropdowny
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Przełącz current dropdown
+                dropdown.classList.toggle('active');
+                
+                // Sprawdź stan dropdownów
+                setTimeout(checkDropdownState, 50);
+            });
+        }
+    });
+    
+    // Zamknij dropdown przy kliknięciu poza nim
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+            setTimeout(checkDropdownState, 50);
+        }
+    });
+    
+    // Opcjonalna kontrola nad przewijaniem logo
+    const scrollingContainer = document.querySelector('.info-items-scrolling');
+    if (scrollingContainer) {
+        // Zatrzymanie na hover
+        scrollingContainer.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+        
+        // Wznowienie po opuszczeniu myszką
+        scrollingContainer.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+    }
+});
+// Prosta funkcja do otwierania/zamykania panelu dostępności
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('accessibilityToggle');
+    const panel = document.getElementById('accessibilityPanel');
+    
+    if (toggleBtn && panel) {
+        toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Kliknięto przycisk accessibility'); // Debug
+            
+            if (panel.classList.contains('active')) {
+                panel.classList.remove('active');
+                toggleBtn.classList.remove('active');
+                console.log('Panel zamknięty');
+            } else {
+                panel.classList.add('active');
+                toggleBtn.classList.add('active');
+                console.log('Panel otwarty');
+            }
+        });
+        
+        // Zamknij przy kliknięciu poza panelem
+        document.addEventListener('click', function(e) {
+            if (!panel.contains(e.target) && panel.classList.contains('active')) {
+                panel.classList.remove('active');
+                toggleBtn.classList.remove('active');
+            }
+        });
+    }
+});
     </script>
 </body>
 </html>
